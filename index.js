@@ -1,5 +1,7 @@
 const { getJobs } = require("./services");
 const express = require("express");
+const cors = require("cors");
+cors.use("cors");
 
 const jobs = [{ title: "Director of Ops", salary: "50000", company: "Amazon" }];
 
