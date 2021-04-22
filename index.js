@@ -10,7 +10,7 @@ const webApp = express();
 //   console.log(`server listen on ${PORT}`);
 // });
 
-const Port = process.env.PORT ? process.env.PORT : 3000;
+const PORT = process.env.PORT ? process.env.PORT : 3000;
 
 //GET JOBS
 webApp.get("/jobs", (req, res) => {
