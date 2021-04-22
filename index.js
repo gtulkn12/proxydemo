@@ -4,10 +4,13 @@ const express = require("express");
 const jobs = [{ title: "Director of Ops", salary: "50000", company: "Amazon" }];
 
 const webApp = express();
-const PORT = 3000;
-webApp.listen(PORT, () => {
-  console.log(`server listen on ${PORT}`);
-});
+
+// const PORT = 3000;
+// webApp.listen(PORT, () => {
+//   console.log(`server listen on ${PORT}`);
+// });
+
+const Port = process.env.PORT ? process.env.PORT : 3000;
 
 //GET JOBS
 webApp.get("/jobs", (req, res) => {
